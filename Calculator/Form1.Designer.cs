@@ -225,7 +225,7 @@
             this.sqrRootBtn.Name = "sqrRootBtn";
             this.sqrRootBtn.Size = new System.Drawing.Size(117, 67);
             this.sqrRootBtn.TabIndex = 3;
-            this.sqrRootBtn.Text = "|x";
+            this.sqrRootBtn.Text = " √ ";
             this.sqrRootBtn.UseVisualStyleBackColor = true;
             this.sqrRootBtn.Click += new System.EventHandler(this.sqrRootBtn_Click);
             // 
@@ -236,9 +236,9 @@
             this.divideBtn.Name = "divideBtn";
             this.divideBtn.Size = new System.Drawing.Size(117, 67);
             this.divideBtn.TabIndex = 3;
-            this.divideBtn.Text = "/";
+            this.divideBtn.Text = " ÷ ";
             this.divideBtn.UseVisualStyleBackColor = true;
-            this.divideBtn.Click += new System.EventHandler(this.divideBtn_Click);
+            this.divideBtn.Click += new System.EventHandler(this.operatorBtn_Click);
             // 
             // sevenBtn
             // 
@@ -280,9 +280,9 @@
             this.timesBtn.Name = "timesBtn";
             this.timesBtn.Size = new System.Drawing.Size(117, 67);
             this.timesBtn.TabIndex = 3;
-            this.timesBtn.Text = "X";
+            this.timesBtn.Text = " × ";
             this.timesBtn.UseVisualStyleBackColor = true;
-            this.timesBtn.Click += new System.EventHandler(this.timesBtn_Click);
+            this.timesBtn.Click += new System.EventHandler(this.operatorBtn_Click);
             // 
             // fourBtn
             // 
@@ -324,9 +324,9 @@
             this.minusBtn.Name = "minusBtn";
             this.minusBtn.Size = new System.Drawing.Size(117, 67);
             this.minusBtn.TabIndex = 3;
-            this.minusBtn.Text = "-";
+            this.minusBtn.Text = " − ";
             this.minusBtn.UseVisualStyleBackColor = true;
-            this.minusBtn.Click += new System.EventHandler(this.minusBtn_Click);
+            this.minusBtn.Click += new System.EventHandler(this.operatorBtn_Click);
             // 
             // oneBtn
             // 
@@ -368,9 +368,9 @@
             this.plusBtn.Name = "plusBtn";
             this.plusBtn.Size = new System.Drawing.Size(117, 67);
             this.plusBtn.TabIndex = 3;
-            this.plusBtn.Text = "+";
+            this.plusBtn.Text = " + ";
             this.plusBtn.UseVisualStyleBackColor = true;
-            this.plusBtn.Click += new System.EventHandler(this.plusBtn_Click);
+            this.plusBtn.Click += new System.EventHandler(this.operatorBtn_Click);
             // 
             // posnegBtn
             // 
