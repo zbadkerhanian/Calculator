@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.headerTable = new System.Windows.Forms.TableLayoutPanel();
-            this.menuBtn = new System.Windows.Forms.Button();
             this.histBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.resultTable = new System.Windows.Forms.TableLayoutPanel();
@@ -70,8 +70,7 @@
             this.headerTable.ColumnCount = 3;
             this.headerTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.headerTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.headerTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.headerTable.Controls.Add(this.menuBtn, 0, 0);
+            this.headerTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.headerTable.Controls.Add(this.histBtn, 2, 0);
             this.headerTable.Controls.Add(this.label1, 1, 0);
             this.headerTable.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,25 +81,17 @@
             this.headerTable.Size = new System.Drawing.Size(492, 58);
             this.headerTable.TabIndex = 1;
             // 
-            // menuBtn
-            // 
-            this.menuBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuBtn.Location = new System.Drawing.Point(3, 3);
-            this.menuBtn.Name = "menuBtn";
-            this.menuBtn.Size = new System.Drawing.Size(44, 52);
-            this.menuBtn.TabIndex = 0;
-            this.menuBtn.Text = "Menu";
-            this.menuBtn.UseVisualStyleBackColor = true;
-            // 
             // histBtn
             // 
+            this.histBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("histBtn.BackgroundImage")));
+            this.histBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.histBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.histBtn.Location = new System.Drawing.Point(445, 3);
+            this.histBtn.Location = new System.Drawing.Point(438, 3);
             this.histBtn.Name = "histBtn";
-            this.histBtn.Size = new System.Drawing.Size(44, 52);
+            this.histBtn.Size = new System.Drawing.Size(51, 52);
             this.histBtn.TabIndex = 1;
-            this.histBtn.Text = "HIST";
             this.histBtn.UseVisualStyleBackColor = true;
+            this.histBtn.Click += new System.EventHandler(this.histBtn_Click);
             // 
             // label1
             // 
@@ -109,7 +100,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(53, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 58);
+            this.label1.Size = new System.Drawing.Size(379, 58);
             this.label1.TabIndex = 2;
             this.label1.Text = "Standard";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,7 +394,7 @@
             this.decimalBtn.TabIndex = 3;
             this.decimalBtn.Text = ".";
             this.decimalBtn.UseVisualStyleBackColor = true;
-            this.decimalBtn.Click += new System.EventHandler(this.decimalBtn_Click);
+            this.decimalBtn.Click += new System.EventHandler(this.numBtn_Click);
             // 
             // equalsBtn
             // 
@@ -462,14 +453,13 @@
             // 
             // Form1
             // 
-            this.AcceptButton = this.equalsBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 603);
             this.Controls.Add(this.keypadTable);
             this.Controls.Add(this.resultTable);
             this.Controls.Add(this.headerTable);
-            this.MinimumSize = new System.Drawing.Size(330, 630);
+            this.MinimumSize = new System.Drawing.Size(510, 650);
             this.Name = "Form1";
             this.Text = "Form1";
             this.headerTable.ResumeLayout(false);
@@ -509,7 +499,6 @@
         private System.Windows.Forms.Button decimalBtn;
         private System.Windows.Forms.Button equalsBtn;
         private System.Windows.Forms.TableLayoutPanel keypadTable;
-        private System.Windows.Forms.Button menuBtn;
         private System.Windows.Forms.Button histBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox inputBox;
